@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.Header{
+    width:100%;
+    height:7em;
+    /* border:2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(190, 182, 182);
+    background-color: rgba(3, 3, 3, 0.76);
+    position: fixed;
+    z-index: 5;
+    transition: .5s ease-in-out;
+}
+.compView{
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+.Header:hover{
+    background-color: rgba(3, 3, 3, 0.877);
+}
+.logo{
+    /* border: 2px solid rgb(255, 255, 255); */
+    height:6em;
+    margin:10px;
+    padding:5px;
+    width:10em;
+    margin-left:3em
+}
+.links{
+    display: flex;
+    /* border:2px solid white; */
+    padding:15px;
+    width:36em;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 19px;
+    /* margin-right: ; */
+}
+.link_head{
+    /* border: 2px solid white; */
+    position: relative;
+    display: inline-block;
+    width:6.4em;
+    height:2.5em;
+    margin: 3px;
+    margin-left: 1em;
+    transition:1 ease-in-out;
+}
+.links .dropDownHead{
+    /* border:2px dashed white; */
+    padding-left:10px;
+    position: absolute;
+    top:0%;
+    bottom:0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    text-align:start;
+    padding-top: 10px;
+    font-size: 15px;
+    transition: .1s ease-in;
+    cursor: pointer;
+}
+.dropDownHead:hover{
+    color:rgb(73, 165, 39)
+}
+.link_head:hover >.dropDownBody{
+   display: block;
+}  
+.dropDownBody span{
+    transition: 0.5s ease;
+}
+ 
+.Header .icon{
+    /* border:1px solid black; */
+    padding: 3px;
+    margin:3px;
+}
+.Header .compView button{
+    width:16em;
+    /* padding:12px; */
+    margin-right: 6em;
+    color:rgb(0, 0, 0);
+    border-radius: 6px;
+     text-align: start;;
+    background-color: rgb(89, 148, 89);
+    border: 1px solid black;
+}
+.Header button i{
+    border-right:1px solid black;
+    margin-right: 20px;
+    padding: 14px;
+    color:black
+}
+.links .link_head{
+    /* border:1px solid white; */
+    padding:10px;
+}
+
+.dropDownBody{
+    width:10em;
+    /* height:12em; */
+    /* border:2px solid white; */
+    position:absolute;
+    /* padding:10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: white;
+    top:57%;
+    left:0%;
+    /* height: 0px; */
+    display: none;
+    font-size: 17px;
+    /* transition:0.7s ease-in-out ; */
+    /* display: ; */
+}
+.dropDownBody span{
+    display: inline-block;
+    /* border:1px solid white; */
+    padding: 13px;
+    width:100%;
+    /* transition: .3s ease-in; */
+    color:black;
+    cursor: pointer;
+    /* text-align: start; */
+}
+.dropDownBody span:hover{
+    color:white;
+    background-color: rgb(145, 98, 45);
+}
+.hide{
+    display: none;
+}
+
+.moreDetails{
+    position: relative;
+    /* border:2px solid green */
+}
+
+.moreDetails .details{
+    position:absolute;
+    /* border: 2px solid red; */
+    width:100%;
+    left:-100%;
+    top:0%;
+    background-color: white;
+    display: none;
+    transition: 1s ease;
+}
+.moreDetails:hover>.details{
+    display: block;
+}
+
+.mobileView{
+    display: none;
+}
+.mobileView .icon{
+    /* border:2px solid white; */
+    transform: scale(200%);
+    margin-right: 2em;
+}
+.mobileContent{
+    /* border: .2px solid white; */
+    position: absolute;
+    top: 100%;
+    width:100%;
+    /* height:22em; */
+    height: 0px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.918);
+    transition: .3s ease-in-out;
+    /* padding:10px */
+}
+.mobileContent .cont{
+    /* border: .2px solid white; */
+    padding:15px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    transition: .3s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.one{
+    /* height: 10em; */
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    padding: 0;
+    margin: 0;
+    transition: .3s ease-in-out;
+}
+.one p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: green; */
+}
+.one .drop{
+  display:flex;
+  flex-direction: column;
+  /* border:2px solid white; */
+  padding:0;
+  /* display: none; */
+  transition: .4s ease-in-out;
+}
+.drop span{
+    padding:15px;
+    border-top: 1px solid white;
+    transition: .3s ease;
+}
+
+
+.drop span:hover{
+  background-color: rgb(101, 187, 101);
+}
+@media (max-width:1064px){
+    .compView{
+        display: none;
+    }
+    .mobileView{
+        display:flex;
+    }
+}
+@media (min-width:1064px) {
+    .mobileContent{
+        display: none;
+    }
+}
+@media (max-width:1111px) {
+    .links{
+        justify-content: flex-start;
+        width:35em;
+        margin-right: 1.5em;
+        /* border:2px solid white */
+    }
+    .link_head{
+        margin-left: 1.4em;
+    }
+}

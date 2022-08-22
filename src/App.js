@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import EarnCrypto from "./pages/EarnCrypto";
+import EarnCrypto2 from "./pages/EarnCrypto2";
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter> 
+   <Routes>
+      <Route path={`/`} element={ <EarnCrypto/>}/>
+      <Route path={`/EarnCrypto2`} element={ <EarnCrypto2/>}/>
+      {/* <Route path={`/fundWallet:${AgentId}`} element={<FundWallet/>}/>
+      <Route path={`/sendMoney:${AgentId}`} element={<SendMoney/>}/>
+      <Route path={`/withdrawMoney:${AgentId}`} element={<WithdrawMoney/>}/>
+      <Route path={`/homePage:${AgentId}`} element={<Homepage/>}/> */}
+   </Routes>
+   </BrowserRouter>
+      {/* <EarnCrypto/> */}
     </div>
   );
 }
