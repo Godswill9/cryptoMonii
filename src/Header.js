@@ -69,7 +69,16 @@ export default function Header() {
 
   return (
     <div className='Header'>
-        <div className='logo'>CryptoTrees</div>
+        {/* <div className='logo'>CryptoTrees</div> */}
+         <div className='logo'>
+        <a href='/'>
+            <img src="/tree-removebg-preview.png"></img>
+            <div className="lowerClass">
+            <h1>CryptoTrees</h1>
+            <span>Algorand ASA444108880 <img src="/verifiedMark.png"></img></span>
+                </div>
+        </a>
+        </div>
         <div className="compView">
         <div className='links'>
             <div className="link_head">
@@ -168,11 +177,7 @@ export default function Header() {
                      </div>
             </div>
             <div className='one cont'>
-                <p onClick={click5}>Earn Crypto {namee5==="none"?<i class="fa fa-arrow-down icon" aria-hidden="true"></i>:<i class="fa fa-arrow-up icon" aria-hidden="true"></i>}</p>
-                     <div className='drop' ref={toggle5} style={{"display":namee5}}>
-                        <span>details</span>
-                        <span>details</span>
-                     </div>
+               <a href="/EarnCrypto2"><p>Earn Crypto</p></a>
             </div>
         </div>
     </div>

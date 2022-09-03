@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Header from "../Header";
 import './styles.css'
+import Typewriter from 'typewriter-effect';
 
 export default function EarnCrypto() {
     const HeaderRef=useRef()
@@ -57,7 +58,17 @@ export default function EarnCrypto() {
                 {/* <img src='/shape_3.png' className='img1'></img> */}
                 <img src='/grasses (3).png' className='img2'></img>
                 <div className='text_section'>
-                <h1 ref={HeaderRef}>Plant trees</h1>
+                <div className='typewritter' >
+                <Typewriter onInit={(typewriter)=> {
+                     typewriter.typeString("Plant trees").pauseFor(1000).deleteAll()
+                      .typeString("Earn Crypto").pauseFor(1000).deleteAll()
+                      .typeString("Extra text")
+                        .start()
+                        ;
+                         }}
+  />
+                </div>
+                {/* <h1 ref={HeaderRef}>Plant trees</h1> */}
            <p>CryptoTrees uses blockchain technology to plant trees, save forsts, and assist the global fight againdt climate change.
             Join the fight by reaning crypto through games, initiatives, and community participation</p>
            <button>START EARNING</button>
@@ -87,7 +98,7 @@ export default function EarnCrypto() {
                     {/* <img src='/png_dots_new2.png' className='img5'></img> */}
                     <div className='text-section2'>
                         <h2>Earn tokens</h2>
-                        <img src='/coin_hand.jfif'></img>
+                        <img className='img' src='/comingSoon-removebg-preview.png'></img>
                     </div>
                 </div>
     <div className='sub_cont3'>
@@ -102,12 +113,12 @@ export default function EarnCrypto() {
         {/* <img src="Untitled-3.png" className='img2'></img> */}
         {/* <img src="Untitled-4.png" className='img3'></img> */}
         {/* <img src="buld.png" className='img4'></img> */}
-        <div className='note_details'>
-        <h1>Charities we support</h1>
+    <div className='note_details'>
+        <h1 className='header'>Charities we support</h1>
         <section>
             <div>
             <h3>Trees for the future</h3>
-            <img className='img_logo' src='/lego.png'></img>
+            <img className='img_logo' src='/lego-removebg-preview.png'></img>
             <p>Through their 4-year training program, called the FOREST GARDEN APPROACH, 
                 farmers plant thousands of trees that restore their soil.This helps farmers grow a large 
                 variiety of fruits and vegetables to eat and sell. So not only does each forest 
@@ -117,7 +128,7 @@ export default function EarnCrypto() {
             </div>
             <div>
             <h3>Rainforest rescue</h3>
-            <img className='img_logo' src='/amazon.png'></img>
+            <img className='img_logo' src='/amazon-removebg-preview.png'></img>
             <p>Through their 4-year training program, called the FOREST GARDEN APPROACH, 
                 farmers plant thousands of trees that restore their soil.This helps farmers grow a large 
                 variiety of fruits and vegetables to eat and sell. So not only does each forest 
@@ -127,7 +138,7 @@ export default function EarnCrypto() {
             </div>
             <div>
             <h3>Trees for the future</h3>
-            <img className='img_logo' src='/adidas.png'></img>
+            <img className='img_logo' src='/adidas-removebg-preview.png'></img>
             <p>Through their 4-year training program, called the FOREST GARDEN APPROACH, 
                 farmers plant thousands of trees that restore their soil.This helps farmers grow a large 
                 variiety of fruits and vegetables to eat and sell. So not only does each forest 
@@ -160,7 +171,7 @@ export default function EarnCrypto() {
         <div className='up'>
         <div className='one'>
             <p>BLOCKCHAIN PARTNER</p>
-            <h3>Algorand</h3>
+            <h3>Algorand</h3> 
             <span>CryptoTrees is powered by the Algorand blockchain.Algorand is carbon negative
                  and provides a green alternative to blockchain technology
             </span>
@@ -178,7 +189,7 @@ export default function EarnCrypto() {
         <p>fBook, discord, twitter</p>
         </div>
     </div>
-    <span className='goUp'><a href="#"><i class="fa fa-hand-o-up" aria-hidden="true"></i></a></span>
+    <a href="#"><span className='goUp'><i class="fa fa-hand-o-up" aria-hidden="true"></i></span></a>
 </div>
 </div>
 )
