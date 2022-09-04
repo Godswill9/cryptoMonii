@@ -128,8 +128,8 @@
 .text_section .typewritter{
     font-size: 60px;
     padding-top:170px;
-    font-family: cursive;
-    font-weight: bold;
+    font-family:  sans-serif;
+   font-weight:bold;
     color:rgb(255, 255, 1);
   }
 .text_section section div{
@@ -186,11 +186,11 @@
 }
 .sub_cont2 .text-section2 img{
     /* transform: scale(330%); */
-    margin-top:-3em;
+    /* margin-top:-3em; */
     border-radius: 10px;
     border:none;
-    width:70%;
-    height:80%;
+    width:20em;
+    height:24em;
     /* border: .1px solid rgb(49, 45, 45); */
 }
 

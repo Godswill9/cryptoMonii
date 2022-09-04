@@ -93,7 +93,8 @@
 .text_section h1{
   font-size: 90px;
   padding-top:170px;
-  font-family: cursive;
+  font-family:  sans-serif;
+   font-weight:bold;
 }
 .text_section p{
   font-size: 20px;
@@ -490,7 +491,7 @@
 }
 @media (max-width:587px) {
     .text_section h1{
-        font-size: 5em;
+        font-size: 3.7em;
     }
 }
 @media (max-width:320px) {
@@ -698,7 +699,7 @@
     background:rgba(0, 0, 0, 0.842);;
 }
 .sub_contB .text_section p{
-    text-align: left;
+   
     color:white
 }
 .sub_contB .img1{
